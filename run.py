@@ -112,3 +112,9 @@ def main_menu():
     
 main_menu()
 
+def exit():
+    """
+    This is when the user can exit the main menu
+    The user will return to the start screen
+    """
+    start_screen()
