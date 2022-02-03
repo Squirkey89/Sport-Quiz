@@ -83,3 +83,6 @@ def exit():
     The user will return to the start screen
     """
     start_screen()
+
+exit()
+ 
