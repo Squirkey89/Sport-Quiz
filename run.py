@@ -26,7 +26,7 @@ def start_screen():
     """
 
 
-print(f"""
+    print(f"""
   /$$$$$$                                  /$$                 /$$$$$$            /$$ 
  /$$__  $$                                | $$                /$$__  $$          |__/      
 | $$  \__/  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$   /$$$$$$$  | $$  \ $$ /$$   /$$ /$$ /$$$$$$$$   
@@ -39,7 +39,7 @@ print(f"""
           | $$                                                                                     
           |__/ 
 """)
-print(f"""
+    print(f"""
 _________________________________111_¶1___________ _____________________________________0888880         
 ________________________________1¶¶¶¶¶¶¶¶1_____________________________________________00000000
 _______________________________¶¶¶¶¶111¶¶¶¶¶1________________________________________0000000000000
@@ -83,5 +83,32 @@ _____________________________¶_11¶¶¶111¶¶¶¶¶¶¶¶1__
 
 \n""")
 
-key = input("Press the enter key to go to the main menu")
+    key = input("Press the enter key to go to the main menu\n")
+
+start_screen()
+
+def main_menu():
+    """
+    Upon passing the start screen. The user will be presented 
+    with three options. First to play the game.
+    The second option is Instructions for playing the game.
+    The final option for the user is to exit the game.   
+    """
+    print("Main Menu\n")
+
+    choice = input(""" A: Start Game\n B: Instructions\n C: Exit\n
+    Please enter your choice here:\n """)
+
+    if choice == "a" or choice == "A":
+        main_game()
+    elif choice == "b" or choice == "B":
+        instructions()
+    elif choice == "c" or choice == "C":
+        exit()
+    else:
+        print("Your choice is incorrect please pick a valide choice")
+
+
+    
+main_menu()
 
