@@ -70,7 +70,7 @@ def main_game():
     else:
         print('Invalid choice please choose a, b, c or d')
 
-    question_answer = input("""Who won the 2018 Monaco Grand Prix??
+    question_answer = input("""Who won the 2018 Monaco Grand Prix?
     A: Lewis Hamilton 
     B: Kimi Raikkonen
     C: Daniel Ricciardo
@@ -83,7 +83,7 @@ def main_game():
         print('Invalid choice please choose a, b, c or d')
     
     question_answer = input("""Which basketball team has attended
-    the most NBA grand finals???
+    the most NBA grand finals?
     A: Golden State Warriors  
     B: Los Angeles Lakers
     C: Philadelphia 76ers
@@ -95,7 +95,7 @@ def main_game():
     else:
         print('Invalid choice please choose a, b, c or d')
 
-    question_answer = input("""Who won the &quot;Champions League&quot; in 1999??
+    question_answer = input("""Who won the Uefa Champions League in 1999?
     A: Barcelona  
     B: Liverpool
     C: Manchester United
@@ -121,7 +121,7 @@ def main_game():
         print('Invalid choice please choose a, b, c or d')
 
     question_answer = input("""What national team won the 2016 edition
-    of UEFA European Championship??
+    of UEFA European Championship?
     A: Portugal  
     B: Germany 
     C: England 
@@ -136,8 +136,8 @@ def main_game():
     question_answer = input("""Who was the top scorer of the 2014 FIFA World Cup?",
     A: Neymar  
     B: Lionel Messi
-    C: Thomas M&uuml;ller
-    D: James Rodr&iacute;guez \n """)
+    C: Thomas Müller
+    D: James Rodríguez\n """)
     if question_answer == 'D' or question_answer == 'd':
         print('Correct well done!\n')
     elif question_answer == 'B'or 'A' or 'C'or question_answer == 'b' or 'a' or 'c':
@@ -183,8 +183,8 @@ def main_game():
     else:
         print('Invalid choice please choose a, b, c or d')
 
-    question_answer = input("""Which soccer team won\
-    the Copa Am&eacute;rica 2015 Championship ?",
+    question_answer = input("""Which soccer team won
+    the Copa America 2015 Championship?",
     A: Brazil  
     B: Argentina
     C: Chile
