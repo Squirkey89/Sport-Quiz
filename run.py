@@ -47,7 +47,7 @@ def start_screen():
 \____ $$$ \______/ |__/|________/
 """)
 
-    key = input("Press the enter key to go to the main menu\n")
+    Enter = input("Press the enter key to go to the main menu\n")
 
 start_screen()
 
@@ -58,145 +58,143 @@ def main_game():
     """
     print("Let the quiz begin\n")
 
-    question_answer = input("""Which country is hosting the 2022 FIFA World Cup?
+    question_answer = input("""1. Which country is hosting the 2022 FIFA World Cup?
     A: Quatar 
     B: Uganda
     C: Vietnam
     D: Bolivia\n """)
-    if question_answer == 'A' or question_answer == 'a':
+    if question_answer.upper() == 'A':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'C' or 'D'or question_answer == 'b' or 'c' or 'd':
+    elif question_answer.upper() == 'B'or 'C' or 'D':
         print('Unlucky incorrect answer\n')
-    else:
+    else: 
         print('Invalid choice please choose a, b, c or d')
 
-    question_answer = input("""Who won the 2018 Monaco Grand Prix?
+    question_answer = input("""2. Who won the 2018 Monaco Grand Prix?
     A: Lewis Hamilton 
     B: Kimi Raikkonen
     C: Daniel Ricciardo
     D: Sebastian Vettel\n """)
-    if question_answer == 'C' or question_answer == 'c':
+    if question_answer.upper() == 'C':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'A' or 'D'or question_answer == 'b' or 'a' or 'd':
+    elif question_answer.upper() == 'B'or 'A' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
     
-    question_answer = input("""Which basketball team has attended
+    question_answer = input("""3. Which basketball team has attended
     the most NBA grand finals?
     A: Golden State Warriors  
     B: Los Angeles Lakers
     C: Philadelphia 76ers
     D: Boston Celtics\n """)
-    if question_answer == 'B' or question_answer == 'b':
+    if question_answer.upper() == 'B':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'A' or 'D'or question_answer == 'b' or 'a' or 'd':
+    elif question_answer.upper() == 'B'or 'A' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
 
-    question_answer = input("""Who won the Uefa Champions League in 1999?
+    question_answer = input("""4. Who won the Uefa Champions League in 1999?
     A: Barcelona  
     B: Liverpool
     C: Manchester United
     D: Bayern Munich\n """)
-    if question_answer == 'C' or question_answer == 'c':
+    if question_answer.upper() == 'C':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'A' or 'D'or question_answer == 'b' or 'a' or 'd':
+    elif question_answer.upper() == 'B'or 'A' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
 
-    question_answer = input("""Which of the following Grand Slam tennis
+    question_answer = input("""5. Which of the following Grand Slam tennis
     tournaments occurs LAST?
     A: Wimbledon  
     B: Australian Open
     C: French Open
     D: US Open \n """)
-    if question_answer == 'D' or question_answer == 'd':
+    if question_answer.upper() == 'D':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'A' or 'C'or question_answer == 'b' or 'a' or 'c':
+    elif question_answer.upper() == 'B'or 'A' or 'C':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
-
-    question_answer = input("""What national team won the 2016 edition
+        print('Invalid choice please choose A, B, C or D')
+        
+    question_answer = input("""6. What national team won the 2016 edition
     of UEFA European Championship?
     A: Portugal  
     B: Germany 
     C: England 
     D: France \n """)
-    if question_answer == 'A' or question_answer == 'a':
+    if question_answer.upper() == 'A':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'D' or 'C'or question_answer == 'b' or 'd' or 'c':
+    elif question_answer.upper() == 'B'or 'D' or 'C':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
 
-    question_answer = input("""Who was the top scorer of the 2014 FIFA World Cup?",
+    question_answer = input("""7. Who was the top scorer of the 2014 FIFA World Cup?",
     A: Neymar  
     B: Lionel Messi
     C: Thomas Müller
     D: James Rodríguez\n """)
-    if question_answer == 'D' or question_answer == 'd':
+    if question_answer.upper() == 'D':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'A' or 'C'or question_answer == 'b' or 'a' or 'c':
+    elif question_answer.upper() == 'B'or 'A' or 'C':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
 
-    question_answer = input("""Who won the 2011 Stanley Cup?",
+    question_answer = input("""8. Who won the 2011 Stanley Cup?",
     A: New York Rangers  
     B: Montreal Canadiens
     C: Boston Bruins
     D: Toronto Maple Leafs \n """)
-    if question_answer == 'C' or question_answer == 'c':
+    if question_answer.upper() == 'C':
         print('Correct well done!\n')
-    elif question_answer == 'B'or 'A' or 'D'or question_answer == 'b' or 'a' or 'd':
+    elif question_answer.upper() == 'B'or 'A' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
 
-    question_answer = input("""Who was the topscorer
+    question_answer = input("""9. Who was the topscorer
     for England national football team?",
     A: David Beckham  
     B: Wayne Rooney
     C: Steven Gerrard
     D: Michael Owen \n """)
-    if question_answer == 'B' or question_answer == 'b':
+    if question_answer.upper() == 'B':
         print('Correct well done!\n')
-    elif question_answer == 'C'or 'A' or 'D'or question_answer == 'c' or 'a' or 'd':
+    elif question_answer.upper() == 'C'or 'A' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
 
-    question_answer = input("""In Formula 1, the Virtual Safety Car was introduced
+    question_answer = input("""10. In Formula 1, the Virtual Safety Car was introduced
     following the fatal crash of which driver?",
     A: Jules Bianchi  
     B: Ayrton Senna
     C: Ronald Ratzenberger
     D: Gilles Villeneuve \n """)
-    if question_answer == 'A' or question_answer == 'a':
+    if question_answer.upper() == 'A':
         print('Correct well done!\n')
-    elif question_answer == 'C'or 'B' or 'D'or question_answer == 'c' or 'b' or 'd':
+    elif question_answer.upper() == 'C'or 'B' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
+        print('Invalid choice please choose A, B, C or D')
 
-    question_answer = input("""Which soccer team won
+    question_answer = input("""11. Which soccer team won
     the Copa America 2015 Championship?",
     A: Brazil  
     B: Argentina
     C: Chile
     D: Paraguay \n """)
-    if question_answer == 'B' or question_answer == 'b':
+    if question_answer.upper() == 'B':
         print('Correct well done!\n')
-    elif question_answer == 'C'or 'A' or 'D'or question_answer == 'c' or 'a' or 'd':
+    elif question_answer.upper() == 'C'or 'A' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d')
-
-
+        print('Invalid choice please choose A, B, C or D')
 
 
 def main_menu():
