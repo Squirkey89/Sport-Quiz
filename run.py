@@ -199,19 +199,7 @@ while play:
         print('Unlucky incorrect answer\n')
     else:
         print('Invalid choice please choose A, B, C or D')
-
-    question_answer = input("""11. Which soccer team won
-    the Copa America 2015 Championship?",
-    A: Brazil
-    B: Argentina
-    C: Chile
-    D: Paraguay \n """)
-    if question_answer.upper() == 'B':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'C'or 'A' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
+        
         print('Invalid choice please choose A, B, C or D')
     print(f"You correctly answered {result} out of {questions} questions")
 
