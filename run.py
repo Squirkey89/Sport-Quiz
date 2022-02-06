@@ -47,9 +47,33 @@ def start_screen():
 \____ $$$ \______/ |__/|________/
 """)
 
-    Enter = input("Press the enter key to go to the main menu\n")
+    name = input("Please enter your name\n")
+    print(f"Hey {name}, Welcome to the Sports Quiz.\n")
 
 start_screen()
+
+
+def main_menu():
+    """
+    Upon passing the start screen. The user will be presented
+    with three options. First to play the game.
+    The second option is Instructions for playing the game.
+    The final option for the user is to exit the game.
+    """
+    
+    print("Main Menu\n")
+
+    print(""" A: Start Game\n B: Instructions\n C: Exit\n """)
+    choice = input("Please enter your choice here:\n")
+
+    if choice == "a" or choice == "A":
+        main_game()
+    elif choice == "b" or choice == "B":
+        instructions()
+    elif choice == "c" or choice == "C":
+        exit()
+    else:
+        print("Your choice is incorrect please pick a valid choice\n")
 
 
 def main_game():
@@ -60,7 +84,7 @@ def main_game():
 play = True
 while play:
     result = 0
-    questions = 12
+    questions = 11
 
     print("Let the quiz begin\n")
 
@@ -199,9 +223,21 @@ while play:
         print('Unlucky incorrect answer\n')
     else:
         print('Invalid choice please choose A, B, C or D')
-        
+
+    question_answer = input("""11. Which soccer team won
+    the Copa America 2015 Championship?",
+    A: Brazil
+    B: Argentina
+    C: Chile
+    D: Paraguay \n """)
+    if question_answer.upper() == 'C':
+        print('Correct well done!\n')
+        result += 1
+    elif question_answer.upper() == 'C'or 'A' or 'D':
+        print('Unlucky incorrect answer\n')
+    else:
         print('Invalid choice please choose A, B, C or D')
-    print(f"You correctly answered {result} out of {questions} questions")
+    print(f"You correctly answered {result} out of {questions} questions\n")
 
     play_again = input("Do you want to again? y/n \n ")
 
@@ -211,28 +247,6 @@ while play:
         break
 print('Thanks for playing :)\n')
 
-
-
-def main_menu():
-    """
-    Upon passing the start screen. The user will be presented
-    with three options. First to play the game.
-    The second option is Instructions for playing the game.
-    The final option for the user is to exit the game.
-    """
-    print("Main Menu\n")
-
-    print(""" A: Start Game\n B: Instructions\n C: Exit\n """)
-    choice = input("Please enter your choice here:\n")
-
-    if choice == "a" or choice == "A":
-        main_game()
-    elif choice == "b" or choice == "B":
-        instructions()
-    elif choice == "c" or choice == "C":
-        exit()
-    else:
-        print("Your choice is incorrect please pick a valid choice\n")
 
 main_menu()
 
