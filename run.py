@@ -74,7 +74,7 @@ def main_menu():
     elif choice == "c" or choice == "C":
         exit()
     else:
-        print("Your choice is incorrect please pick a valid choice\n")
+        print("Your choice is incorrect please choose a valid option\n")
         input("Choose one of a,b,c:")
 
 
@@ -105,7 +105,9 @@ while play:
     elif question_answer.upper() == 'B' or 'C' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose a, b, c or d\n')
+        print('You must enter a valid input to continue')
+        input("Choose one of a,b,c,d:")
+
 
     question_answer = input("""2. Who won the 2018 Monaco Grand Prix?
     A: Lewis Hamilton
@@ -118,8 +120,9 @@ while play:
         result += 1
     elif question_answer.upper() == 'B' or 'A' or 'D':
         print('Unlucky incorrect answer\n')
-    if not ('A', 'B' 'C' or 'D'):
-        print('Invalid choice please choose A, B, C or D')
+    else:
+        print('You must enter a valid input to continue')
+        input("Choose one of a,b,c,d:")
 
     question_answer = input("""3. Which basketball team has attended
     the most NBA grand finals?
@@ -133,7 +136,8 @@ while play:
     elif question_answer.upper() == 'B' or 'A' or 'D':
         print('Unlucky incorrect answer\n')
     else:
-        print('Invalid choice please choose A, B, C or D')
+        print('You must enter a valid input to continue')
+        input("Choose one of a,b,c,d:")
 
     question_answer = input("""4. Who won the Uefa Champions League in 1999?
     A: Barcelona
@@ -253,6 +257,7 @@ while play:
         break
     else:
         print('You have not picked a valid answer please choose y/n :)\n')
-        
+        input("Pick again:\n")
+
 
 main_game()
