@@ -72,7 +72,7 @@ while play:
     if question_answer.upper() == 'A':
         print('Correct well done!\n')
         result += 1
-    if question_answer.upper() == 'B' or 'C' or 'D':
+    elif question_answer.upper() == 'B' or 'C' or 'D':
         print('Unlucky incorrect answer\n')
     else:
         print('Invalid choice please choose a, b, c or d\n')
@@ -214,6 +214,15 @@ while play:
     else:
         print('Invalid choice please choose A, B, C or D')
     print(f"You correctly answered {result} out of {questions} questions")
+
+    play_again = input("Do you want to again? y/n \n ")
+
+    if play_again == 'Y' or play_again == 'y':
+        playing = True
+    elif play_again == 'N' or play_again == 'n':
+        break
+print('Thanks for playing :)\n')
+
 
 
 def main_menu():
