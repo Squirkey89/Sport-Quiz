@@ -47,11 +47,12 @@ def start_screen():
 \____ $$$ \______/ |__/|________/
 """)
 
-    name = input("Please enter your name\n")
-    print(f"Hey {name}, Welcome to the Sports Quiz.\n")
+    username = input("Please enter your name\n")
+    print(f"Hey {username}, Welcome to the Sports Quiz.\n")
+
 
 start_screen()
-
+start = input("Press enter to got to the main menu\n")
 
 def main_menu():
     """
@@ -74,6 +75,7 @@ def main_menu():
         exit()
     else:
         print("Your choice is incorrect please pick a valid choice\n")
+        input("Choose one of a,b,c:")
 
 
 def main_game():
@@ -81,6 +83,10 @@ def main_game():
     This is the Quiz for the user to play it is multiple choice
     and has four options for the user to choose from.
     """
+
+main_menu()
+
+
 play = True
 while play:
     result = 0
@@ -245,9 +251,8 @@ while play:
         playing = True
     elif play_again == 'N' or play_again == 'n':
         break
-print('Thanks for playing :)\n')
-
-
-main_menu()
+    else:
+        print('You have not picked a valid answer please choose y/n :)\n')
+        
 
 main_game()
