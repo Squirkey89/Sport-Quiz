@@ -57,6 +57,8 @@ def main_game():
     This is the Quiz for the user to play it is multiple choice
     and has four options for the user to choose from.
     """
+play = True
+while play:
     result = 0
     questions = 12
 
