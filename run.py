@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from questions import questions
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -78,7 +79,7 @@ def main_menu():
         input("Choose one of a,b,c:")
 
 
-def main_game():
+def main_game(questions):
     """
     This is the Quiz for the user to play it is multiple choice
     and has four options for the user to choose from.
@@ -93,171 +94,6 @@ while play:
     questions = 11
 
     print("Let the quiz begin\n")
-
-    question_answer = input("""1. Which country is hosting the 2022 FIFA World Cup?
-    A: Quatar
-    B: Uganda
-    C: Vietnam
-    D: Bolivia\n """)
-    if question_answer.upper() == 'A':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'B' or 'C' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('You must enter a valid input to continue')
-        input("Choose one of a,b,c,d:")
-
-
-    question_answer = input("""2. Who won the 2018 Monaco Grand Prix?
-    A: Lewis Hamilton
-    B: Kimi Raikkonen
-    C: Daniel Ricciardo
-    D: Sebastian Vettel\n """)
-
-    if question_answer.upper() == 'C':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'B' or 'A' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('You must enter a valid input to continue')
-        input("Choose one of a,b,c,d:")
-
-    question_answer = input("""3. Which basketball team has attended
-    the most NBA grand finals?
-    A: Golden State Warriors
-    B: Los Angeles Lakers
-    C: Philadelphia 76ers
-    D: Boston Celtics\n """)
-    if question_answer.upper() == 'B':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'B' or 'A' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('You must enter a valid input to continue')
-        input("Choose one of a,b,c,d:")
-
-    question_answer = input("""4. Who won the Uefa Champions League in 1999?
-    A: Barcelona
-    B: Liverpool
-    C: Manchester United
-    D: Bayern Munich\n """)
-    if question_answer.upper() == 'C':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'B' or 'A' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('Invalid choice please choose A, B, C or D')
-
-    question_answer = input("""5. Which of the following Grand Slam tennis
-    tournaments occurs LAST?
-    A: Wimbledon
-    B: Australian Open
-    C: French Open
-    D: US Open \n """)
-    if question_answer.upper() == 'D':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'B' or 'A' or 'C':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('Invalid choice please choose A, B, C or D')
-
-    question_answer = input("""6. What national team won the 2016 edition
-    of UEFA European Championship?
-    A: Portugal
-    B: Germany
-    C: England
-    D: France \n """)
-    if question_answer.upper() == 'A':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'B' or 'D' or 'C':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('Invalid choice please choose: A, B, C or D.')
-
-    question_answer = input("""7. Who was the top scorer of the 2014 FIFA World Cup?",
-    A: Neymar
-    B: Lionel Messi
-    C: Thomas Müller
-    D: James Rodríguez\n """)
-    if question_answer.upper() == 'D':
-        print('Correct well done.!\n')
-        result += 1
-    elif question_answer.upper() == 'B'or 'A' or 'C':
-        print('Unlucky incorrect answer.\n')
-    else:
-        print('Invalid choice please choose: A, B, C or D')
-
-    question_answer = input("""8. Who won the 2011 Stanley Cup?",
-    A: New York Rangers
-    B: Montreal Canadiens
-    C: Boston Bruins
-    D: Toronto Maple Leafs \n """)
-    if question_answer.upper() == 'C':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'B'or 'A' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('Invalid choice please choose: A, B, C or D')
-
-    question_answer = input("""9. Who was the topscorer
-    for England national football team?",
-    A: David Beckham
-    B: Wayne Rooney
-    C: Steven Gerrard
-    D: Michael Owen \n """)
-    if question_answer.upper() == 'B':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'C'or 'A' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('Invalid choice please choose A, B, C or D')
-
-    question_answer = input("""10. In Formula 1, the Virtual Safety Car was introduced
-    following the fatal crash of which driver?",
-    A: Jules Bianchi
-    B: Ayrton Senna
-    C: Ronald Ratzenberger
-    D: Gilles Villeneuve \n """)
-    if question_answer.upper() == 'A':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'C'or 'B' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('Invalid choice please choose A, B, C or D')
-
-    question_answer = input("""11. Which soccer team won
-    the Copa America 2015 Championship?",
-    A: Brazil
-    B: Argentina
-    C: Chile
-    D: Paraguay \n """)
-    if question_answer.upper() == 'C':
-        print('Correct well done!\n')
-        result += 1
-    elif question_answer.upper() == 'C'or 'A' or 'D':
-        print('Unlucky incorrect answer\n')
-    else:
-        print('Invalid choice please choose A, B, C or D')
-    print(f"You correctly answered {result} out of {questions} questions\n")
-
-    play_again = input("Do you want to again? y/n \n ")
-
-    if play_again == 'Y' or play_again == 'y':
-        playing = True
-    elif play_again == 'N' or play_again == 'n':
-        break
-    else:
-        print('You have not picked a valid answer please choose y/n :)\n')
-        input("Pick again:\n")
 
 
 main_game()
