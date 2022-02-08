@@ -68,13 +68,16 @@ def instructions():
     print("When the question is answered, the next question will appear.\n")
     print("You will receive your quiz results at the end. Best of luck!!!\n")
     print("")
-    print("Press esc to return to the menu screen or press p to start the game.")
-    print("")
 
-instructions()
+    while True:
+        inst_answer = input("Press the letter 'r' to return to the menu screen.")
 
-
-
+        if inst_answer == 'R' or inst_answer == 'r':
+                    main_menu()
+        else:
+            print("Your choice is incorrect please choose a valid option\n")
+            input("Choose 'r' to return to the main menu screen:\n")      
+    
 
 def main_game():
     """
