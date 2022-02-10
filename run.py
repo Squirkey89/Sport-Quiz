@@ -102,7 +102,7 @@ def instructions():
     print("")
 
     while True:
-        return_menu = input("Press the letter 'r' to return to the menu screen.")
+        return_menu = input("Press the letter 'r' to return to the menu screen.\n")
 
         if return_menu == 'R' or return_menu == 'r':
                     main_menu()
@@ -124,22 +124,28 @@ def play_quiz_game():
     random.shuffle(questions)
 
     for entry in questions:
+        print("****************************Sports Quiz*************************************")
+        print()
         print(entry[0])
         option = input("A, B, C or D:\n")
         option = option.upper()
-        if option == entry[1]:
+
+
+        while option == entry[1]:
             print("Correct, Well done!")
             result = result + 1
-            print()
-        if option != ["A, B, C or D"]:
-            print(input("Only a, b, c or d will be accepted as answers\n"))
-        else:
+            print(result)
+            break
+
+        if option != entry[1]:
             print('Incorrect answer')
-            
+            print()
+                
+
+        
 
           
 
-play_quiz_game()
 
 
 def main_menu():
@@ -154,6 +160,7 @@ def main_menu():
 
     print(""" A: Start Game\n B: Instructions\n C: Exit\n """)
     choice = input("Please enter your choice here:\n")
+    print()
 
     if choice == "a" or choice == "A":
         play_quiz_game()
@@ -165,4 +172,10 @@ def main_menu():
         print("Your choice is incorrect please choose a valid option\n")
         input("Choose one of a,b,c:")
 
+        main_menu = home
+        return home
+        
+
 main_menu()
+
+play_quiz_game()
