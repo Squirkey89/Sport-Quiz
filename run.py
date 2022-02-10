@@ -114,7 +114,32 @@ def instructions():
     print("")
 
 
+def play_quiz_game():
+    """
+    This is the Quiz for the user to play it is multiple choice
+    and has four options for the user to choose from.
+    """
+    result = 0
+    questions = quiz_questions()
+    random.shuffle(questions)
 
+    for entry in questions:
+        print(entry[0])
+        option = input("A, B, C or D:\n")
+        option = option.upper()
+        if option == entry[1]:
+            print("Correct, Well done!")
+            result = result + 1
+            print()
+        if option != ["A, B, C or D"]:
+            print(input("Only a, b, c or d will be accepted as answers\n"))
+        else:
+            print('Incorrect answer')
+            
+
+          
+
+play_quiz_game()
 
 
 def main_menu():
