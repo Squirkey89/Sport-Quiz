@@ -140,13 +140,7 @@ def play_quiz_game():
         if option != entry[1]:
             print('Incorrect answer')
             print()
-                
-
-        
-
-          
-
-
+            
 
 def main_menu():
     """
