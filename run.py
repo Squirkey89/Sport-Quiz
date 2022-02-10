@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-import questions
+import random
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -17,6 +17,37 @@ score = SHEET.worksheet('score')
 
 data = score.get_all_values()
 
+def quiz_questions():
+    """
+    List of quiz questions and answers
+    """
+    questions = []
+    questions.append(["Who won the 2018 Monaco Grand Prix?\n" "A: Lewis Hamilton\n" "B: Kimi Raikkonen\n"
+    "C: Daniel Ricciardo\n""D: Sebastien Vettel\n", "C"])
+    questions.append(["Who won the Uefa Champions League in 1999?\n" "A: Barcelona\n" "B: Liverpool\n"
+    "C: Manchester United\n""D: Bayern Munich\n", "C"])
+    questions.append(["What national team won the 2016 edition of the UEFA European Championship\n" "A: Portugal\n" "B: Germany\n"
+    "C: England\n""D: France\n", "A"])
+    questions.append(["Who was the topscorer for England national football team?\n" "A: David Beckham\n" "B: Wayne Rooney\n"
+    "C: Steven Gerrard\n""D: Michael Owen\n", "B"])
+    questions.append(["Who was the top scorer of the 2014 FIFA World Cup?\n" "A: Neymar\n" "B: Lionel Messi\n"
+    "C: Thomas Müller\n""D: James Rodríguez\n", "D"])
+    questions.append(["Which basketball team has attended the most NBA grand finals?\n" "A: Golden State Warriors\n" "B: Los Angeles Lakers\n"
+    "C: Philadelphia 76ers\n""D: Boston Celtics\n", "B"])
+    questions.append(["Who won the 2011 Stanley Cup?\n" "A: New York Rangers\n" "B: Montreal Canadiens\n"
+    "C: Boston Bruins\n""D: Toronto Maple Leafs\n", "C"])
+    questions.append(["Which soccer team won the Copa America 2015 Championship?\n" "A: Brazil\n" "B: Argentina\n"
+    "C: Chile\n""D: Paraguay\n", "C"])
+    questions.append(["In Formula 1, the Virtual Safety Car was introduced following the fatal crash of which driver?\n" "A: Jules Bianchi\n" "B: Ayrton Senna\n"
+    "C: Ronald Ratzenberger\n""D: Gilles Villeneuve\n", "A"])
+    questions.append(["Which country is hosting the 2022 FIFA World Cup?\n" "A: Quatar\n" "B: Uganda\n"
+    "C: Vietnam\n""D: Bolivia\n", "A"])
+    questions.append(["Which golfer won the the 2019 Masters tournament?\n" "A: Bubba Watson\n" "B: Tiger Woods\n"
+    "C: Rory McIllroy\n""D: Phil Mickelson\n", "B"])
+    questions.append(["Which of the following Grand Slam tennis tournaments occurs LAST?\n" "A: Wimbledon\n" "B: Australian\n"
+    "C: French Open\n""D: US Open\n", "D"])
+
+    return questions
 
 def start_screen():
     """
@@ -26,7 +57,7 @@ def start_screen():
     Then they are prompted to press the enter key
     """
 
-    print(f"""
+    print("""
   /$$$$$$                                  /$$
  /$$__  $$                                | $$
 | $$  \__/  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$   /$$$$$$$
@@ -55,6 +86,7 @@ def start_screen():
 start_screen()
 start = input("Press enter to got to the main menu\n")
 
+
 def instructions():
     """
     The user will hear be introduced to the insyructions on how to play the quiz.
@@ -62,7 +94,7 @@ def instructions():
     print("")
     print("****************************Instructions*************************************")
     print("")
-    print("You will be tested on your sporting knowledge with 11 sport quiz questions.\n")  
+    print("You will be tested on your sporting knowledge with 11 sport quiz questions.\n")
     print("The questions are multiple choice, so you will have to select a, b, c, or d.\n")
     print("Upon making your choice, you will be notified of how you performed on this question.\n")
     print("When the question is answered, the next question will appear.\n")
@@ -70,22 +102,20 @@ def instructions():
     print("")
 
     while True:
-        inst_answer = input("Press the letter 'r' to return to the menu screen.")
+        return_menu = input("Press the letter 'r' to return to the menu screen.")
 
-        if inst_answer == 'R' or inst_answer == 'r':
+        if return_menu == 'R' or return_menu == 'r':
                     main_menu()
         else:
             print("Your choice is incorrect please choose a valid option\n")
-            input("Choose 'r' to return to the main menu screen:\n")      
-    
+            input("Choose 'r' to return to the main menu screen:\n")
+    print("")
+    print("")
+    print("")
 
-def main_game():
-    """
-    This is the Quiz for the user to play it is multiple choice
-    and has four options for the user to choose from.
-    """
 
-main_game()
+
+
 
 def main_menu():
     """
@@ -101,11 +131,11 @@ def main_menu():
     choice = input("Please enter your choice here:\n")
 
     if choice == "a" or choice == "A":
-        main_game()
+        play_quiz_game()
     elif choice == "b" or choice == "B":
         instructions()
     elif choice == "c" or choice == "C":
-        exit()
+        quit()
     else:
         print("Your choice is incorrect please choose a valid option\n")
         input("Choose one of a,b,c:")
