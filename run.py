@@ -1,7 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
-
+QUESTIONS_NUM = 1
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -16,6 +16,7 @@ SHEET = GSPREAD_CLIENT.open('sports_quiz')
 score = SHEET.worksheet('score')
 
 data = score.get_all_values()
+
 
 def quiz_questions():
     """
@@ -48,6 +49,7 @@ def quiz_questions():
     "C: French Open\n""D: US Open\n", "D"])
 
     return questions
+
 
 def start_screen():
     """
@@ -105,7 +107,7 @@ def instructions():
         return_menu = input("Press the letter 'r' to return to the menu screen.\n")
 
         if return_menu == 'R' or return_menu == 'r':
-                    main_menu()
+            main_menu()
         else:
             print("Your choice is incorrect please choose a valid option\n")
             input("Choose 'r' to return to the main menu screen:\n")
@@ -127,19 +129,41 @@ def play_quiz_game():
         print("****************************Sports Quiz*************************************")
         print()
         print(entry[0])
-        option = input("A, B, C or D:\n")
-        option = option.upper()
+        user_option = input("A, B, C or D:\n")
+        user_option = user_option.upper()
 
-
-        while option == entry[1]:
+        if user_option == entry[1]:
             print("Correct, Well done!")
             result = result + 1
-            print(result)
-            break
+            QUESTIONS_NUM + 1
 
-        if option != entry[1]:
+        elif user_option != entry[1]:
             print('Incorrect answer')
             print()
+            QUESTIONS_NUM + 1
+
+        else: 
+            QUESTIONS_NUM == 1
+            break
+            print(f"Your final score is {result} out of {QUESTIONS_NUM}")
+            play_again
+
+           
+def play_again():
+    """
+    This is available to players once they finish the quiz.
+    The user has the option to play again.
+    """   
+    replay = input("Do you want to play again? y/n\n")
+    replay = replay.upper
+
+    if replay == 'Y':
+            play_quiz_game()
+    if replay == 'N':
+            input("Press r to return to the main menu\n")
+            main_menu()
+    
+
             
 
 def main_menu():
@@ -166,10 +190,8 @@ def main_menu():
         print("Your choice is incorrect please choose a valid option\n")
         input("Choose one of a,b,c:")
 
-        main_menu = home
-        return home
-        
-
 main_menu()
 
 play_quiz_game()
+
+play_again()
