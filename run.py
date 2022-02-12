@@ -116,7 +116,6 @@ def instructions():
     print("")
 
 
-
 def play_quiz_game():
     """
     This is the Quiz for the user to play it is multiple choice
@@ -126,7 +125,6 @@ def play_quiz_game():
     questions = quiz_questions()
     random.shuffle(questions)
     points = 0
-
 
 
     for question in questions:
@@ -150,6 +148,7 @@ def play_quiz_game():
             points = points + 1
         elif user_input != correct_answer:
             print("Incorrect! Unlucky.")
+       
        
     print("")
     score(points, NAME)
