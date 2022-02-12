@@ -87,7 +87,7 @@ NAME = input("Please enter your name\n")
 print(f"Hey {NAME}, Welcome to the Sports Quiz.\n")
 
 
-start = input("Press enter to got to the main menu\n")
+start = input("Press enter to go to the main menu\n")
 
 
 def instructions():
@@ -111,7 +111,6 @@ def instructions():
             main_menu()
         else:
             print("Your choice is incorrect please choose a valid option\n")
-            input("Choose 'r' to return to the main menu screen:\n")
     print("")
     print("")
     print("")
@@ -152,10 +151,18 @@ def play_quiz_game():
         elif user_input != correct_answer:
             print("Incorrect! Unlucky.")
        
-
-    print(f"Well done {NAME}, you scored {points} out of 12")
-
+    print("")
+    score(points, NAME)
+    print("")
     play_again()
+
+def score(points, NAME):
+    if points <= 10:
+        print(f"Great job {NAME}. You scored {points} out of 12")
+    elif points > 10:
+        print(f"Well done {NAME}. You scored {points} out of 12")
+    elif points > 6:
+        print(f"That didnt go well {NAME}. You scored {points} out of 12")
 
 
 def play_again():
@@ -170,8 +177,6 @@ def play_again():
         play_quiz_game()
     if replay == 'N':
         quit()
-
-
 
 
 def main_menu():
