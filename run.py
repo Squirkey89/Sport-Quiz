@@ -92,14 +92,15 @@ start = input("Press enter to go to the main menu\n")
 
 def instructions():
     """
-    The user will hear be introduced to the insyructions on how to play the quiz.
+    The user will hear be introduced to the 
+    instructions on how to play the quiz.
     """
     print("")
     print("***********************Instructions************************\n")
     print("")
-    print("You will be tested on your sporting knowledge with 11 sport quiz questions.\n")
-    print("The questions are multiple choice, so you will have to select a, b, c, or d.\n")
-    print("Upon making your choice, you will be notified of how you performed on this question.\n")
+    print("You will be tested on your sports knowledge with 11 questions.\n")
+    print("The questions are multiple choice,you will pick a, b, c, or d.\n")
+    print("The answer to the question will be displayed once you choose.\n")
     print("When the question is answered, the next question will appear.\n")
     print("You will receive your quiz results at the end. Best of luck!!!\n")
     print("")
@@ -149,13 +150,17 @@ def play_quiz_game():
         elif user_input != correct_answer:
             print("Incorrect! Unlucky.")
        
-       
+
     print("")
     score(points, NAME)
     print("")
     play_again()
 
 def score(points, NAME):
+    """
+    Score function keeps the score of the quiz game.
+    Once the quiz is finished the result is printed.
+    """
     if points <= 10:
         print(f"Great job {NAME}. You scored {points} out of 12")
     elif points > 10:
