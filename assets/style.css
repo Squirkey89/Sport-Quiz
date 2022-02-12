@@ -1,0 +1,7 @@
+.main {
+    display: flex;
+    background-image: image-url("assets/stock-photo-grand-sports-collage-soccer-basketball-hockey-baseball-american-football-isolated-on-white-1071589835.jpg");    
+    background-size:cover;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+  }

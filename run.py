@@ -102,7 +102,7 @@ def instructions():
     print("The questions are multiple choice,you will pick a, b, c, or d.\n")
     print("The answer to the question will be displayed once you choose.\n")
     print("When the question is answered, the next question will appear.\n")
-    print("You will receive your quiz results at the end. Best of luck!!!\n")
+    print("You will receive your result at the end. Best of luck!!!\n")
     print("")
 
     while True:
