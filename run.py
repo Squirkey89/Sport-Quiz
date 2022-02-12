@@ -126,6 +126,8 @@ def play_quiz_game():
     
     questions = quiz_questions()
     random.shuffle(questions)
+    points = 0
+
 
 
     for question in questions:
@@ -133,21 +135,23 @@ def play_quiz_game():
         print()
         print(question[0])
 
-        points = 0
-
-        user_input = "a b c d"
+        valid_options = ['A','B','C','D']
         user_input = input("Choose one of the options:\n")
         user_input = user_input.upper()
         correct_answer = question[1]
 
-        if user_input == correct_answer:
+        while(user_input not in valid_options):
+            print('Invalid Input, please try again')
+            user_input = input('Choice one of the options: \n')
+            user_input = user_input.upper()
+        if user_input not in valid_options:
+            print("Invalid input")
+        elif user_input == correct_answer:
             print("Correct! Well done.")
             points = points + 1
         elif user_input != correct_answer:
             print("Incorrect! Unlucky.")
-        else:
-            user_input != "a" "b" "c" or "d"
-            print("Invalid input")
+       
 
     print(f"Well done {NAME}, you scored {points} out of 12")
 
@@ -160,12 +164,12 @@ def play_again():
     The user has the option to play again.
     """   
     replay = input("Do you want to play again? y/n\n")
-    replay = replay.upper
+    replay = replay.upper()
 
     if replay == 'Y':
         play_quiz_game()
     if replay == 'N':
-        exit()
+        quit()
 
 
 
