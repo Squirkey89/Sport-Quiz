@@ -24,7 +24,7 @@ def quiz_questions():
     """
     questions = []
     questions.append(["Who won the 2018 Monaco Grand Prix?\n" "A: Lewis Hamilton\n" "B: Kimi Raikkonen\n"
-    "C: Daniel Ricciardo\n""D: Sebastien Vettel\n", "C"])
+    "C: Daniel Ricciardo\n""D: Sebastien Vettel\n","C"])
     questions.append(["Who won the Uefa Champions League in 1999?\n" "A: Barcelona\n" "B: Liverpool\n"
     "C: Manchester United\n""D: Bayern Munich\n", "C"])
     questions.append(["What national team won the 2016 edition of the UEFA European Championship\n" "A: Portugal\n" "B: Germany\n"
@@ -36,16 +36,16 @@ def quiz_questions():
     questions.append(["Which basketball team has attended the most NBA grand finals?\n" "A: Golden State Warriors\n" "B: Los Angeles Lakers\n"
     "C: Philadelphia 76ers\n""D: Boston Celtics\n", "B"])
     questions.append(["Who won the 2011 Stanley Cup?\n" "A: New York Rangers\n" "B: Montreal Canadiens\n"
-    "C: Boston Bruins\n""D: Toronto Maple Leafs\n", "C"])
+    "C: Boston Bruins\n""D: Toronto Maple Leafs\n","C"])
     questions.append(["Which soccer team won the Copa America 2015 Championship?\n" "A: Brazil\n" "B: Argentina\n"
-    "C: Chile\n""D: Paraguay\n", "C"])
+    "C: Chile\n""D: Paraguay\n","C"])
     questions.append(["In Formula 1, the Virtual Safety Car was introduced following the fatal crash of which driver?\n" "A: Jules Bianchi\n" "B: Ayrton Senna\n"
-    "C: Ronald Ratzenberger\n""D: Gilles Villeneuve\n", "A"])
+    "C: Ronald Ratzenberger\n""D: Gilles Villeneuve\n","A"])
     questions.append(["Which country is hosting the 2022 FIFA World Cup?\n" "A: Quatar\n" "B: Uganda\n"
     "C: Vietnam\n""D: Bolivia\n", "A"])
     questions.append(["Which golfer won the the 2019 Masters tournament?\n" "A: Bubba Watson\n" "B: Tiger Woods\n"
     "C: Rory McIllroy\n""D: Phil Mickelson\n", "B"])
-    questions.append(["Which of the following Grand Slam tennis tournaments occurs LAST?\n" "A: Wimbledon\n" "B: Australian\n"
+    questions.append(["Which of the following Grand Slam tennis tournaments occurs LAST?\n""A: Wimbledon\n" "B: Australian\n"
     "C: French Open\n""D: US Open\n", "D"])
 
     return questions
@@ -81,11 +81,12 @@ def start_screen():
 \____ $$$ \______/ |__/|________/
 """)
 
-    username = input("Please enter your name\n")
-    print(f"Hey {username}, Welcome to the Sports Quiz.\n")
-
-
 start_screen()
+
+NAME = input("Please enter your name\n")
+print(f"Hey {NAME}, Welcome to the Sports Quiz.\n")
+
+
 start = input("Press enter to got to the main menu\n")
 
 
@@ -94,7 +95,7 @@ def instructions():
     The user will hear be introduced to the insyructions on how to play the quiz.
     """
     print("")
-    print("****************************Instructions*************************************")
+    print("***********************Instructions************************\n")
     print("")
     print("You will be tested on your sporting knowledge with 11 sport quiz questions.\n")
     print("The questions are multiple choice, so you will have to select a, b, c, or d.\n")
@@ -116,39 +117,43 @@ def instructions():
     print("")
 
 
+
 def play_quiz_game():
     """
     This is the Quiz for the user to play it is multiple choice
     and has four options for the user to choose from.
     """
-    result = 0
+    
     questions = quiz_questions()
     random.shuffle(questions)
 
-    for entry in questions:
-        print("****************************Sports Quiz*************************************")
+
+    for question in questions:
+        print("***********************Sports Quiz************************\n")
         print()
-        print(entry[0])
-        user_option = input("A, B, C or D:\n")
-        user_option = user_option.upper()
+        print(question[0])
 
-        if user_option == entry[1]:
-            print("Correct, Well done!")
-            result = result + 1
-            QUESTIONS_NUM + 1
+        points = 0
 
-        elif user_option != entry[1]:
-            print('Incorrect answer')
-            print()
-            QUESTIONS_NUM + 1
+        user_input = "a b c d"
+        user_input = input("Choose one of the options:\n")
+        user_input = user_input.upper()
+        correct_answer = question[1]
 
-        else: 
-            QUESTIONS_NUM == 1
-            break
-            print(f"Your final score is {result} out of {QUESTIONS_NUM}")
-            play_again
+        if user_input == correct_answer:
+            print("Correct! Well done.")
+            points = points + 1
+        elif user_input != correct_answer:
+            print("Incorrect! Unlucky.")
+        else:
+            user_input != "a" "b" "c" or "d"
+            print("Invalid input")
 
-           
+    print(f"Well done {NAME}, you scored {points} out of 12")
+
+    play_again()
+
+
 def play_again():
     """
     This is available to players once they finish the quiz.
@@ -158,13 +163,12 @@ def play_again():
     replay = replay.upper
 
     if replay == 'Y':
-            play_quiz_game()
+        play_quiz_game()
     if replay == 'N':
-            input("Press r to return to the main menu\n")
-            main_menu()
-    
+        exit()
 
-            
+
+
 
 def main_menu():
     """
@@ -174,7 +178,7 @@ def main_menu():
     The final option for the user is to exit the game.
     """
 
-    print("****************************Main Menu*************************************\n")
+    print("***********************Main Menu************************\n")
 
     print(""" A: Start Game\n B: Instructions\n C: Exit\n """)
     choice = input("Please enter your choice here:\n")
