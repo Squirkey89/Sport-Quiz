@@ -115,7 +115,7 @@ start = input("Press enter to go to the main menu\n")
 
 def instructions():
     """
-    The user will hear be introduced to the
+    The user will be introduced to the
     instructions on how to play the quiz.
     """
     print("")
@@ -190,7 +190,7 @@ def score(points, NAME):
     if points >= 8:
         print(f"Great job {NAME}. You scored {points} out of {num_questions}")
     elif points < 8:
-        print(f"Not to bad{NAME}. You scored {points} out of {num_questions}")
+        print(f"Not bad {NAME}. You scored {points} out of {num_questions}")
 
 
 def play_again():
@@ -198,12 +198,21 @@ def play_again():
     This is available to players once they finish the quiz.
     The user has the option to play again.
     """
+    valid_options = ['Y', 'N']
     replay = input("Do you want to play again? y/n\n")
     replay = replay.upper()
 
+    while(replay not in valid_options):
+        print('Invalid Input, please try again')
+        replay = input("Please enter your choice here:\n")
+        replay = replay.upper()
+    if replay not in valid_options:
+        print("Your choice is incorrect please choose a valid option\n")
+        input("Choose one of a,b,c:")
     if replay == 'Y':
         play_quiz_game()
-    if replay == 'N':
+    elif replay == 'N':
+        print("Click 'Run program' to restart")
         quit()
 
 
@@ -235,6 +244,7 @@ def main_menu():
     elif choice == "b" or choice == "B":
         instructions()
     elif choice == "c" or choice == "C":
+        print("Click 'Run program' to restart")
         quit()
 
 
