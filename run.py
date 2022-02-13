@@ -25,45 +25,50 @@ def quiz_questions():
     questions.append(["Who won the 2018 Monaco Grand Prix?\n"
                       "A: Lewis Hamilton\n" "B: Kimi Raikkonen\n"
                       "C: Daniel Ricciardo\n" "D: Sebastien Vettel\n", "C"])
-    questions.append(["Who won the Uefa Champions League in 1999?\n"
-                      "A: Barcelona\n" "B: Liverpool\n"
-                      "C: Manchester United\n""D: Bayern Munich\n", "C"])
-    questions.append(["What national team won the 2016 edition of the UEFA Euro\
-                      pean Championship\n"
-                      "A: Portugal\n" "B: Germany\n"
-                      "C: England\n""D: France\n", "A"])
-    questions.append(["Who was the topscorer for England national,football team\
-                       ?\n"
-                      "A: David Beckham\n" "B: Wayne Rooney\n"
-                      "C: Steven Gerrard\n""D: Michael Owen\n", "B"])
-    questions.append(["Who was the top scorer of the 2014 FIFA World Cup?\n"
-                      "A: Neymar\n" "B: Lionel Messi\n"
-                      "C: Thomas Müller\n""D: James Rodríguez\n", "D"])
-    questions.append(["Which basketball team has attended the most NBA grand,fi\
-                       nals?\n"
-                      "A: Golden State Warriors\n" "B: Los Angeles Lakers\n"
-                      "C: Philadelphia 76ers\n""D: Boston Celtics\n", "B"])
-    questions.append(["Who won the 2011 Stanley Cup?\n"
-                      "A: New York Rangers\n" "B: Montreal Canadiens\n"
-                      "C: Boston Bruins\n""D: Toronto Maple Leafs\n", "C"])
-    questions.append(["Which soccer team won the Copa America,2015 Championship\
-                      ?\n"
-                      "A: Brazil\n" "B: Argentina\n"
-                      "C: Chile\n" "D: Paraguay\n", "C"])
-    questions.append(["In Formula 1, the Virtual Safety Car was introduced,foll\
-                      owing the fatal crash of which driver?\n"
-                      "A: Jules Bianchi\n" "B: Ayrton Senna\n"
-                      "C: Ronald Ratzenberger\n""D: Gilles Villeneuve\n", "A"])
-    questions.append(["Which country is hosting the 2022 FIFA World Cup?\n"
-                      "A: Quatar\n" "B: Uganda\n"
-                      "C: Vietnam\n""D: Bolivia\n", "A"])
-    questions.append(["Which golfer won the the 2019 Masters tournament?\n"
-                      "A: Bubba Watson\n" "B: Tiger Woods\n"
-                      "C: Rory McIllroy\n""D: Phil Mickelson\n", "B"])
-    questions.append(["Which of the following Grand Slam tennis,tournaments occ\
-                      urs LAST?\n"
-                      "A: Wimbledon\n" "B: Australian\n"
-                      "C: French Open\n""D: US Open\n", "D"])
+    questions.append([
+        "Who won the Uefa Champions League in 1999?\n"
+        "A: Barcelona\n" "B: Liverpool\n"
+        "C: Manchester United\n""D: Bayern Munich\n", "C"])
+    questions.append([
+        "What national team won the 2016 UEFA European Championship?\n"
+        "A: Portugal\n" "B: Germany\n"
+        "C: England\n""D: France\n", "A"])
+    questions.append([
+        "Who was the topscorer for England national football team""?\n"
+        "A: David Beckham\n" "B: Wayne Rooney\n"
+        "C: Steven Gerrard\n""D: Michael Owen\n", "B"])
+    questions.append([
+        "Who was the top scorer of the 2014 FIFA World Cup?\n"
+        "A: Neymar\n" "B: Lionel Messi\n"
+        "C: Thomas Müller\n""D: James Rodríguez\n", "D"])
+    questions.append([
+        "Which basketball team has attended the most NBA grand finals?\n"
+        "A: Golden State Warriors\n" "B: Los Angeles Lakers\n"
+        "C: Philadelphia 76ers\n""D: Boston Celtics\n", "B"])
+    questions.append([
+        "Who won the 2011 Stanley Cup?\n"
+        "A: New York Rangers\n" "B: Montreal Canadiens\n"
+        "C: Boston Bruins\n""D: Toronto Maple Leafs\n", "C"])
+    questions.append([
+        "Which soccer team won the Copa America,2015 Championship?\n"
+        "A: Brazil\n" "B: Argentina\n"
+        "C: Chile\n" "D: Paraguay\n", "C"])
+    questions.append([
+        "F1 Virtual Safety Cars were introduced after which driver's death?\n"
+        "A: Jules Bianchi\n" "B: Ayrton Senna\n"
+        "C: Ronald Ratzenberger\n""D: Gilles Villeneuve\n", "A"])
+    questions.append([
+        "Which country is hosting the 2022 FIFA World Cup?\n"
+        "A: Quatar\n" "B: Uganda\n"
+        "C: Vietnam\n""D: Bolivia\n", "A"])
+    questions.append([
+        "Which golfer won the the 2019 Masters tournament?\n"
+        "A: Bubba Watson\n" "B: Tiger Woods\n"
+        "C: Rory McIllroy\n""D: Phil Mickelson\n", "B"])
+    questions.append([
+        "Which of the following Grand Slam tennis tournaments occurs last?\n"
+        "A: Wimbledon\n" "B: Australian\n"
+        "C: French Open\n""D: US Open\n", "D"])
 
     return questions
 
