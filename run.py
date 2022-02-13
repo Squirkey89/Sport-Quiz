@@ -163,8 +163,6 @@ def score(points, NAME):
     """
     if points <= 10:
         print(f"Great job {NAME}. You scored {points} out of 12")
-    elif points > 10:
-        print(f"Well done {NAME}. You scored {points} out of 12")
     elif points > 6:
         print(f"That didnt go well {NAME}. You scored {points} out of 12")
 
@@ -194,18 +192,24 @@ def main_menu():
     print("***********************Main Menu************************\n")
 
     print(""" A: Start Game\n B: Instructions\n C: Exit\n """)
+    valid_options = ['A','B','C']
     choice = input("Please enter your choice here:\n")
+    choice = choice.upper()
     print()
 
+    while(choice not in valid_options):
+        print('Invalid Input, please try again')
+        choice = input("Please enter your choice here:\n")
+        choice = choice.upper()
+    if choice not in valid_options:
+        print("Your choice is incorrect please choose a valid option\n")
+        input("Choose one of a,b,c:")
     if choice == "a" or choice == "A":
         play_quiz_game()
     elif choice == "b" or choice == "B":
         instructions()
     elif choice == "c" or choice == "C":
         quit()
-    else:
-        print("Your choice is incorrect please choose a valid option\n")
-        input("Choose one of a,b,c:")
 
 main_menu()
 
