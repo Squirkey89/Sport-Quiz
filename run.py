@@ -1,7 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
-QUESTIONS_NUM = 1
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -121,6 +120,7 @@ def play_quiz_game():
     """
     This is the Quiz for the user to play it is multiple choice
     and has four options for the user to choose from.
+    I am able to take control, is there any chat option in this app?
     """
     
     questions = quiz_questions()
@@ -161,9 +161,9 @@ def score(points, NAME):
     Score function keeps the score of the quiz game.
     Once the quiz is finished the result is printed.
     """
-    if points <= 10:
+    if points >= 8:
         print(f"Great job {NAME}. You scored {points} out of 12")
-    elif points > 6:
+    elif points < 8:
         print(f"That didnt go well {NAME}. You scored {points} out of 12")
 
 
@@ -210,6 +210,7 @@ def main_menu():
         instructions()
     elif choice == "c" or choice == "C":
         quit()
+
 
 main_menu()
 
