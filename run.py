@@ -107,7 +107,10 @@ def start_screen():
 start_screen()
 
 NAME = input("Please enter your name\n")
-print(f"Hey {NAME}, Welcome to the Sports Quiz.\n")
+while not NAME.strip():
+    NAME = input("Invalid, Please enter your name\n")
+else:
+    print(f"Hey {NAME}, Welcome to the Sports Quiz.\n")
 
 
 start = input("Press enter to go to the main menu\n")
