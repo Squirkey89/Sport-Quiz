@@ -22,9 +22,10 @@ def quiz_questions():
     List of quiz questions and answers
     """
     questions = []
-    questions.append(["Who won the 2018 Monaco Grand Prix?\n"
-                      "A: Lewis Hamilton\n" "B: Kimi Raikkonen\n"
-                      "C: Daniel Ricciardo\n" "D: Sebastien Vettel\n", "C"])
+    questions.append([
+        "Who won the 2018 Monaco Grand Prix?\n"
+        "A: Lewis Hamilton\n" "B: Kimi Raikkonen\n"
+        "C: Daniel Ricciardo\n" "D: Sebastien Vettel\n", "C"])
     questions.append([
         "Who won the Uefa Champions League in 1999?\n"
         "A: Barcelona\n" "B: Liverpool\n"
