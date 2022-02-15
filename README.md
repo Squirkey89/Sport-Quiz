@@ -13,3 +13,25 @@ The sports quiz application is a quiz game which will display questions for the 
 7. [Deployment](#id-deploy)
 8. [Credits](#id-credits)
 9. [Acknowledgements](#id-acknowledgements)
+
+# UI<div id='ui'>
+## User Stories
+
+ ### As a User
+
+  * As a user, I want a website that is easy to navigate.
+
+  * As a user, I want clear instructions on how to play the game.
+
+  * As a user, I want to see a game that will be playable on all devices and performace and experience will not change.
+
+  * As a user, I want there to be a score counter, that will keep track of the scores.
+
+  * As a user, I want there to be a leaderboard, that will display high scores.
+
+  * As a user, I want there to be updated on the result once the game has finished.
+ 
+
+### As a returning user
+
+ * As a returning user, I want the website to be continually updated with new features and questions to keep me playing the game.
