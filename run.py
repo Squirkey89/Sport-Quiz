@@ -1,6 +1,8 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
+
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -113,6 +115,7 @@ else:
     print(f"Hey {NAME}, Welcome to the Sports Quiz.\n")
 
 
+
 start = input("Press enter to go to the main menu\n")
 
 
@@ -141,6 +144,40 @@ def instructions():
     print("")
     print("")
     print("")
+
+
+def leaderboard():
+    """
+    This page displays the users scores
+    """
+    print("***********************Leaderboard************************\n")
+    print()
+    score_sheet = SHEET.worksheet("score").get_all_values()[1:]
+    for data in score_sheet:
+        data[1] = int(data[1])
+
+    update_data = sorted(score_sheet,key=lambda x: int(x[1]), reverse=True)
+
+    print("---------------------Top 5 Scores-------------------------")
+    print("")
+    print("Pos \tName \tScore")
+
+    if(len(update_data)<5):
+        count = len(update_data)
+    else:
+        count = 5
+
+    for i in range(0,count):
+        print(f'{i+1}\t{update_data[i][0]}\t{update_data[i][1]}')
+        print("")
+
+    while True:
+        return_menu = input("Press the letter 'r' to return to menu screen.\n")
+
+        if return_menu == 'R' or return_menu == 'r':
+            main_menu()
+        else:
+            print("Your choice is incorrect please choose a valid option\n")
 
 
 def play_quiz_game():
@@ -177,13 +214,13 @@ def play_quiz_game():
             print("Incorrect! Unlucky.")
 
     print("")
-    score(points, NAME)
+    point(points, NAME)
     update_worksheet(NAME, points, 'score')
     print("")
     play_again()
 
 
-def score(points, NAME):
+def point(points, NAME):
     """
     Score function keeps the score of the quiz game.
     Once the quiz is finished the result is printed.
@@ -229,8 +266,8 @@ def main_menu():
 
     print("***********************Main Menu************************\n")
 
-    print(""" A: Start Game\n B: Instructions\n C: Exit\n """)
-    valid_options = ['A', 'B', 'C']
+    print(""" A: Start Game\n B: Instructions\n C: Leaderboard\n D: Exit\n """)
+    valid_options = ['A', 'B', 'C', 'D']
     choice = input("Please enter your choice here:\n")
     choice = choice.upper()
     print()
@@ -247,6 +284,8 @@ def main_menu():
     elif choice == "b" or choice == "B":
         instructions()
     elif choice == "c" or choice == "C":
+        leaderboard()
+    elif choice == "d" or choice == "D":
         print("Click 'Run program' to restart")
         quit()
 
@@ -269,3 +308,4 @@ main_menu()
 play_quiz_game()
 
 play_again()
+
