@@ -15,7 +15,7 @@ The sports quiz application is a quiz game which will display questions for the 
 8. [Credits](#id-credits)
 9. [Acknowledgements](#id-acknowledgements)
 
-# UI<div id='ui'>
+# UI<div id='#id-ui'/>
 ## User Stories
 
  ### As a User
@@ -38,7 +38,7 @@ The sports quiz application is a quiz game which will display questions for the 
  * As a returning user, I want the website to be continually updated with new features and questions to keep me playing the game.
 
 
-# Features<div id='id-features'>
+# Features<div id='#id-features'/>
 
 ### Home screen
 
@@ -71,6 +71,12 @@ The leaderboard collects the top five scores of the game and displays them in or
 
 ![leaderboard](https://user-images.githubusercontent.com/91072896/154074463-5a68b7a2-3b29-4936-bcea-3b2e52a5b0a4.png)
 
+### Google spreadsheets
+
+This is where the user name and final scores are stored. Once the user finishes the quiz it calculates that users score to the spreadsheet. The leaderboard then pulls the top five with the highest scores and then displays them in order on the leaderboard. page.&nbsp;
+![google-spreadsheet](https://user-images.githubusercontent.com/91072896/154124060-38d756ae-50bb-4adb-b024-cc55bd790c83.png)
+
+
 ### The instructions
 
 At the main menu, the second option that customers can choose to select is instructions. Selecting this option will bring them to the instructions page. Here the customer is shown the instructions of how to play the game. There is also a prompt at the bottom of the page instructing users to press the letter 'r' to return to the main menu.&nbsp;
@@ -86,3 +92,12 @@ The final option on the main menu is for the users to exit the game. The custome
 ### Features Left to Implement
 
 * I would definetly add more questions in the future as there are only twelve questions there at the moment this would add a better experience for the user if ther are many more questions that they can play through.
+
+* A feature that I would also implemet would be to apply a time stamp to the leaderboard and google spreadsheet as it this will give the user more information aboutt their top scores if they play the gaem regularly and find themselves in the top five multiple times.
+
+## Testing<div id='#id-testing'/>
+
+* Accessibility
+  * For the website, I used devtools to run lighthouse, and application scored well primarily on accessibility. Below are the results.&nbsp;
+
+  ![lighthouse 1](https://user-images.githubusercontent.com/91072896/154124927-d18e2334-4205-469e-ac93-f4fd89f126e2.png)
