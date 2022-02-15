@@ -8,12 +8,11 @@ The sports quiz application is a quiz game which will display questions for the 
 1. [UI](#id-ui)
 2. [Features](#id-features)
 3. [Testing](#id-testing) 
-4. [Validator Testing](#id-validator)
-5. [Bugs](#id-bugs)
-6. [Unfixed Bugs](#id-bugs)
-7. [Deployment](#id-deploy)
-8. [Credits](#id-credits)
-9. [Acknowledgements](#id-acknowledgements)
+4. [Bugs](#id-bugs)
+5. [Unfixed Bugs](#id-bugs)
+6. [Deployment](#id-deploy)
+7. [Credits](#id-credits)
+8. [Acknowledgements](#id-acknowledgements)
 
 # UI<div id='#id-ui'/>
 ## User Stories
@@ -93,11 +92,24 @@ The final option on the main menu is for the users to exit the game. The custome
 
 * I would definetly add more questions in the future as there are only twelve questions there at the moment this would add a better experience for the user if ther are many more questions that they can play through.
 
-* A feature that I would also implemet would be to apply a time stamp to the leaderboard and google spreadsheet as it this will give the user more information aboutt their top scores if they play the gaem regularly and find themselves in the top five multiple times.
+* A feature that I would also implemet would be to apply a time stamp to the leaderboard and google spreadsheet as it this will give the user more information about their top scores if they play the gaem regularly and find themselves in the top five multiple times.
+
+* Furthermore, I would like to add a feature in the future that allows players to play against each other. A user can choose from a number of questions, and then both players can go head to head over them.
 
 ## Testing<div id='#id-testing'/>
 
-* Accessibility
+* Lighthouse Validation
   * For the website, I used devtools to run lighthouse, and application scored well primarily on accessibility. Below are the results.&nbsp;
 
   ![lighthouse 1](https://user-images.githubusercontent.com/91072896/154124927-d18e2334-4205-469e-ac93-f4fd89f126e2.png)
+
+* Pep8 Validation
+  * I put the code through pep8 validation where it passed and this confirmed that there were no issues.&nbsp;
+
+![pep8](https://user-images.githubusercontent.com/91072896/154150498-9fce554a-ed33-4859-a85f-837b1b2512b6.png)
+
+* Input Validation
+  * I tested this throughout the process of creating this application. I tested this by input incorrect characters strings and numbers when they were expected. Adding spaces before inputting the answer.&nbsp;
+
+* I began testing the code in the terminal in the gitpod workspace. Once I deployed the project and push my changes 
+I could test it on the Heroku terminal.
