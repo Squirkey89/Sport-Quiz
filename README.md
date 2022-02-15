@@ -1,31 +1,15 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Sports Quiz
 
-Welcome Squirkey89,
+The sports quiz application is a quiz game which will display questions for the user to answer. All sports based so it is targeted and probably would appeal more to sports fans but can be enjoyed by anyone. This project gave me the chance to work with an API and this is how the users scores and username are kept and this is updated on an excel spreadsheet once they have completed the quiz. I created the sports quiz as a way to make a fun and entertaining game that anyone can enjoy. The game will become more and more entertaining as questions will be added in the future. This will keep the game entertaining and users coming back to play.
+![amiresponsive](https://user-images.githubusercontent.com/91072896/154056148-34a77624-4b4b-48cc-85b5-2e1100de39d2.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+# Table of Contents
+1. [UI](#id-ui)
+2. [Features](#id-features)
+3. [Testing](#id-testing) 
+4. [Validator Testing](#id-validator)
+5. [Bugs](#id-bugs)
+6. [Unfixed Bugs](#id-bugs)
+7. [Deployment](#id-deploy)
+8. [Credits](#id-credits)
+9. [Acknowledgements](#id-acknowledgements)

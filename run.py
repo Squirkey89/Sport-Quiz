@@ -106,6 +106,7 @@ def start_screen():
 \____ $$$ \______/ |__/|________/
 """)
 
+
 start_screen()
 
 NAME = input("Please enter your name\n")
@@ -126,7 +127,7 @@ def instructions():
     print("")
     print("***********************Instructions************************\n")
     print("")
-    print("You will be tested on your sports knowledge with 11 questions.\n")
+    print("You will be tested on your sports knowledge with 12 questions.\n")
     print("The questions are multiple choice,you will pick a, b, c, or d.\n")
     print("The answer to the question will be displayed once you choose.\n")
     print("When the question is answered, the next question will appear.\n")
