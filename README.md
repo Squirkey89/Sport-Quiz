@@ -113,3 +113,33 @@ The final option on the main menu is for the users to exit the game. The custome
 
 * I began testing the code in the terminal in the gitpod workspace. Once I deployed the project and push my changes 
 I could test it on the Heroku terminal.
+
+## Bugs<div id='id-bugs'/>
+
+  
+## Unfixed Bugs<div id='id-unfixed'/>
+  
+
+## Deployment<div id='id-deployment'/>
+The website was deployed early on when I undertook the project. This was so I could test it early on. To deploy the website I used Heroku.
+
+Following are the steps I took to deploy my Heroku project:
+
+* The run.py file should be cleaned up of any unneeded imports.
+* For input methods to work properly in the deployed mock terminal, add a new line character at the end of the text in the input '\n'.
+* In the terminal, run the following command to create a list of requirements: pip3 freeze > requirements.txt
+* In your Heroku account, click 'Create New App' in the Dashboard. Name the application and select Europe from the region dropdown menu.
+* Press the "Create App" button.
+* Config Vars should be set up in Settings (only if creds.json file is being used).
+* To add the Python buildpack, click the ‘Add Buildpack’ button and then click the ‘Save Changes’ button.
+* Next, choose ‘NodeJS’ and click save once more. Make sure your buildpacks are set up correctly. Python always goes on top of NodeJS. They can be moved around.
+* Select the deployment tab.
+* Choose 'GitHub' for your deployment method.
+* Then search for the repository name. It will link to github and click connect
+* Then click 'Enable Automatic Deployments'.
+* In the Manual deploy section, select the main branch and click 'Deploy Branch'.
+* Once the project is deployed, click ‘view’ to access deployed project.
+* When returning to this page there is a view app button to get access to the project.
+
+The live link to this website can be found here - https://sportsquiz1.herokuapp.com/
+
