@@ -115,7 +115,6 @@ else:
     print(f"Hey {NAME}, Welcome to the Sports Quiz.\n")
 
 
-
 start = input("Press enter to go to the main menu\n")
 
 
@@ -136,14 +135,13 @@ def instructions():
 
     while True:
         return_menu = input("Press the letter 'r' to return to menu screen.\n")
+        return_menu = return_menu.upper()
+        return_menu = return_menu.strip()
 
-        if return_menu == 'R' or return_menu == 'r':
+        if return_menu == 'R':
             main_menu()
         else:
             print("Your choice is incorrect please choose a valid option\n")
-    print("")
-    print("")
-    print("")
 
 
 def leaderboard():
@@ -156,25 +154,27 @@ def leaderboard():
     for data in score_sheet:
         data[1] = int(data[1])
 
-    update_data = sorted(score_sheet,key=lambda x: int(x[1]), reverse=True)
+    update_data = sorted(score_sheet, key=lambda x: int(x[1]), reverse=True)
 
     print("---------------------Top 5 Scores-------------------------")
     print("")
     print("Pos \tName \tScore")
 
-    if(len(update_data)<5):
+    if(len(update_data) < 5):
         count = len(update_data)
     else:
         count = 5
 
-    for i in range(0,count):
-        print(f'{i+1}\t{update_data[i][0]}\t{update_data[i][1]}')
+    for i in range(0, count):
+        print(f"{i+1}\t{update_data[i][0]}\t{update_data[i][1]}")
         print("")
 
     while True:
         return_menu = input("Press the letter 'r' to return to menu screen.\n")
+        return_menu = return_menu.upper()
+        return_menu = return_menu.strip()
 
-        if return_menu == 'R' or return_menu == 'r':
+        if return_menu == 'R':
             main_menu()
         else:
             print("Your choice is incorrect please choose a valid option\n")
@@ -199,11 +199,13 @@ def play_quiz_game():
         valid_options = ['A', 'B', 'C', 'D']
         user_input = input("Choose one of the options:\n")
         user_input = user_input.upper()
+        user_input = user_input.strip()
         correct_answer = question[1]
 
         while(user_input not in valid_options):
             print('Invalid Input, please try again')
             user_input = input('Choice one of the options: \n')
+            user_input = user_input.strip()
             user_input = user_input.upper()
         if user_input not in valid_options:
             print("Invalid input")
@@ -241,11 +243,13 @@ def play_again():
     valid_options = ['Y', 'N']
     replay = input("Do you want to play again? y/n\n")
     replay = replay.upper()
+    replay = replay.strip()
 
     while(replay not in valid_options):
         print('Invalid Input, please try again')
         replay = input("Please enter your choice here:\n")
         replay = replay.upper()
+        replay = replay.strip()
     if replay not in valid_options:
         print("Your choice is incorrect please choose a valid option\n")
         input("Choose one of a,b,c:")
@@ -270,22 +274,24 @@ def main_menu():
     valid_options = ['A', 'B', 'C', 'D']
     choice = input("Please enter your choice here:\n")
     choice = choice.upper()
+    choice = choice.strip()
     print()
 
     while(choice not in valid_options):
         print('Invalid Input, please try again')
         choice = input("Please enter your choice here:\n")
         choice = choice.upper()
+        choice = choice.strip()
     if choice not in valid_options:
         print("Your choice is incorrect please choose a valid option\n")
         input("Choose one of a,b,c:")
-    if choice == "a" or choice == "A":
+    if choice == "A":
         play_quiz_game()
-    elif choice == "b" or choice == "B":
+    elif choice == "B":
         instructions()
-    elif choice == "c" or choice == "C":
+    elif choice == "C":
         leaderboard()
-    elif choice == "d" or choice == "D":
+    elif choice == "D":
         print("Click 'Run program' to restart")
         quit()
 
@@ -308,4 +314,3 @@ main_menu()
 play_quiz_game()
 
 play_again()
-
