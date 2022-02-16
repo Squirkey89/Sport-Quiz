@@ -18,7 +18,7 @@ The sports quiz application is a quiz game which will display questions for the 
       * [Features left to implement](#id-implement)
 3. [Testing](#id-testing) 
 4. [Bugs](#id-bugs)
-5. [Unfixed Bugs](#id-bugs)
+5. [Unfixed Bugs](#id-unfixed)
 6. [Technologies Used](#id-tech)
 7. [Deployment](#id-deploy)
 8. [Credits](#id-credits)
