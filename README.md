@@ -6,8 +6,8 @@ The sports quiz application is a quiz game which will display questions for the 
 
 # Table of Contents
 1. [Flow Chart](#id-flow)
-1. [UI](#id-ui)
-2. [Features](#id-features)
+2. [UI](#id-ui)
+3. [Features](#id-features)
       * [Home Screen](#id-home)
       * [Main Menu](#id-menu)
       * [The Game](#id-game)
@@ -17,13 +17,14 @@ The sports quiz application is a quiz game which will display questions for the 
       * [The Instructions](#id-instructions)
       * [Exit](#id-exit)
       * [Features left to implement](#id-implement)
-3. [Testing](#id-testing) 
-4. [Bugs](#id-bugs)
-5. [Unfixed Bugs](#id-unfixed)
-6. [Technologies Used](#id-tech)
-7. [Deployment](#id-deploy)
-8. [Credits](#id-credits)
-9. [Acknowledgements](#id-acknowledgements)
+4. [Invalid input](#id-invalid)
+5. [Testing](#id-testing) 
+6. [Bugs](#id-bugs)
+7. [Unfixed Bugs](#id-unfixed)
+8. [Technologies Used](#id-tech)
+9. [Deployment](#id-deploy)
+10. [Credits](#id-credits)
+11. [Acknowledgements](#id-acknowledgements)
 
 # Flow Chart<div id='id-flow'>
 This flow chart I created shows the structure of the application I entended to create.&nbsp;
@@ -116,6 +117,37 @@ The final option on the main menu is for the users to exit the game. The custome
 
 * Furthermore, I would like to add a feature in the future that allows players to play against each other. A user can choose from a number of questions, and then both players can go head to head over them.
 
+# Invalid input
+
+## Enter Name
+  As the user starts the game they will have to enter their name to begin. If the user leaves any white spaces or just presses enter they will not be able to proceed. An error message will be displayed and the user cant continue until a valid input is entered.&nbsp;
+
+![name-val](https://user-images.githubusercontent.com/91072896/154194873-309cf2c4-c1ed-4380-a6bc-39d6d7f5abe4.png)
+
+## Menu
+  The user will have four options in the main menu screen. If they decide to choose an invalid character an error message is displayed and they are prompted to enter a, b, c or d. I also used strip() and upper() on all the inputs fields if the user leaves a blank by accident and then enters a valid input then the option choosen will be accepted.&nbsp;
+
+  ![menu-val](https://user-images.githubusercontent.com/91072896/154193240-6eb3d169-a33f-4e2f-8681-79350be91d21.png)
+
+## Leaderboard/Instructions
+  Leaderboard and instructions are grouped together because they both have the same input validation. Once you enter the leaderbord or instructions the onlyn way to return to main menu is to press the 'r' and failure to do this will result in invalid input and a prompt message to press 'r' to return.&nbsp; 
+
+![instruct-val](https://user-images.githubusercontent.com/91072896/154193241-806bec41-c6b5-4383-9ee3-99d8f5a827d4.png)
+
+![leaderboard-input-valid](https://user-images.githubusercontent.com/91072896/154193242-8f10b254-dc27-404f-a723-0c96999c4c27.png)
+
+## Game
+  The game is multiple choice so the user can in put a, b, c or d. An invalid input will result in the game pausing until the user enters valid input to the question asked. The game will not continue until on of these valid options are entered.&nbsp;
+
+  ![game-val](https://user-images.githubusercontent.com/91072896/154193239-07e95fed-000e-4e2e-96c4-10323994d03e.png)
+
+## Play Again
+  When the game comes to an end after the twelve questions the user will be give an option to play again. The user can type 'y' to reply yes and the game will start again. If they type 'n' then the game will quit. Any other option choosen will result in an invalid input and the message shown below will be displayed.
+  &nbsp;
+
+  ![plagagain-val](https://user-images.githubusercontent.com/91072896/154193236-a5888a12-dff2-4da2-949b-53ecf247b4aa.png)
+
+
 # Testing<div id='id-testing'>
 
 ## Lighthouse Validation
@@ -128,10 +160,9 @@ The final option on the main menu is for the users to exit the game. The custome
 
 ![pep8](https://user-images.githubusercontent.com/91072896/154150498-9fce554a-ed33-4859-a85f-837b1b2512b6.png)
 
-## Input Validation
-  * I tested this throughout the process of creating this application. I tested this by input incorrect characters strings and numbers when they were expected. Adding spaces before inputting the answer.&nbsp;
 
-  * I began testing the code in the terminal in the gitpod workspace. Once I deployed the project and push my changes 
+## Heroku terminal
+  * I began testing the code in the terminal in the gitpod workspace. Once I deployed the project and push my changes   
 I could test it on the Heroku terminal.
 
 ## Search Engines

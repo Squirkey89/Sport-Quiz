@@ -78,9 +78,11 @@ def quiz_questions():
 
 def start_screen():
     """
-    The large header is displayed for the user.
-    There is an input field below the large text
-    This in for the user to enter name and begin.
+    This is the beginning of the quiz for 
+    the user they will first find an 
+    introduction to the game with the quiz 
+    name and images. Then they are 
+    prompted to press the enter key
     """
 
     print("""
@@ -151,8 +153,8 @@ def leaderboard():
     print("***********************Leaderboard************************\n")
     print()
     score_sheet = SHEET.worksheet("score").get_all_values()[1:]
-    for data_score in score_sheet:
-        data_score[1] = data_score(data[1])
+    for data in score_sheet:
+        data[1] = (data[1])
 
     update_data = sorted(score_sheet, key=lambda x: int(x[1]), reverse=True)
 
@@ -177,13 +179,14 @@ def leaderboard():
         if return_menu == 'R':
             main_menu()
         else:
-            print("Your choice is incorrect please choose a valid option\n")
+            print("Your choice is not a valid option \n")
 
 
 def play_quiz_game():
     """
     This is the Quiz for the user to play it is multiple choice
     and has four options for the user to choose from.
+    I am able to take control, is there any chat option in this app?
     """
 
     questions = quiz_questions()
@@ -203,7 +206,7 @@ def play_quiz_game():
 
         while(user_input not in valid_options):
             print('Invalid Input, please try again')
-            user_input = input('Choice one of the options: \n')
+            user_input = input('Choose one of the options: a, b, c, d \n')
             user_input = user_input.strip()
             user_input = user_input.upper()
         if user_input not in valid_options:
@@ -239,7 +242,7 @@ def point(points, NAME):
 def play_again():
     """
     This is available to players once they finish the quiz.
-    The user has the option to play again or simply quit.
+    The user has the option to play again.
     """
     valid_options = ['Y', 'N']
     replay = input("Do you want to play again? y/n\n")
@@ -248,7 +251,7 @@ def play_again():
 
     while(replay not in valid_options):
         print('Invalid Input, please try again')
-        replay = input("Please enter your choice here:\n")
+        replay = input("Please enter your choice here: y/n\n")
         replay = replay.upper()
         replay = replay.strip()
     if replay not in valid_options:
@@ -263,9 +266,10 @@ def play_again():
 
 def main_menu():
     """
-    Upon passing the start screen.
-    The user will be presented with four options.
-    Play game, Instructions, Leaderboard and exit
+    Upon passing the start screen. The user will be presented
+    with three options. First to play the game.
+    The second option is Instructions for playing the game.
+    The final option for the user is to exit the game.
     """
 
     print("***********************Main Menu************************\n")
@@ -279,12 +283,12 @@ def main_menu():
 
     while(choice not in valid_options):
         print('Invalid Input, please try again')
-        choice = input("Please enter your choice here:\n")
+        choice = input("Please choose a,b,c,d:\n")
         choice = choice.upper()
         choice = choice.strip()
     if choice not in valid_options:
         print("Your choice is incorrect please choose a valid option\n")
-        input("Choose one of a,b,c:")
+        input("Choose one of a,b,c,d:")
     if choice == "A":
         play_quiz_game()
     elif choice == "B":
