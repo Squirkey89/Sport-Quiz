@@ -32,8 +32,6 @@ The sports quiz application is a quiz game which will display questions for the 
 
   * As a user, I want clear instructions on how to play the game.
 
-  * As a user, I want to see a game that will be playable on all devices and performace and experience will not change.
-
   * As a user, I want there to be a score counter, that will keep track of the scores.
 
   * As a user, I want there to be a leaderboard, that will display high scores.
@@ -44,6 +42,9 @@ The sports quiz application is a quiz game which will display questions for the 
 ## As a returning user
 
  * As a returning user, I want the website to be continually updated with new features and questions to keep me playing the game.
+
+  * As a returning user, I want to be able to challenge my friends.
+
 
 
 # Features<div id='id-features'>
@@ -181,3 +182,7 @@ The live link to this website can be found here - https://sportsquiz1.herokuapp.
   * The large ascii text at the beginning of the game was used from a website called [patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) This website has loads of different styles available for text. The style I used is called 'Big moneyne'.
 
 ## Acknowledgments<div id='id-acknowledgements'>
+  * My mentor for the useful feedback direction and guidance he has provided since the beginning of the course.
+  * The online tutors help and and advice when stuck on a problem with no one else to turn too.
+  * The slack community who are very helpful.
+  * The Code Institite course material.
