@@ -121,14 +121,30 @@ The final option on the main menu is for the users to exit the game. The custome
 * Input Validation
   * I tested this throughout the process of creating this application. I tested this by input incorrect characters strings and numbers when they were expected. Adding spaces before inputting the answer.&nbsp;
 
-* I began testing the code in the terminal in the gitpod workspace. Once I deployed the project and push my changes 
+  * I began testing the code in the terminal in the gitpod workspace. Once I deployed the project and push my changes 
 I could test it on the Heroku terminal.
+
+* Search Engines
+  * Google Chrome
+  * Safari
+  * Mozilla Firefox
+
+* Devices
+  * ASUS Chromebook Flip C434
+  * Apple Macbook
+  * Apple Ipad
+  * Samsung Galaxy A50 
+  * Iphone 12 
 
 ## Bugs<div id='id-bugs'>
 
-  
+As I was running my code through Pep8 validation, I found the lines to be too long. After some research I discovered I needed to use a backslash to separate the lines. Python requires backslashes to separate lines. I learned that Python accepts a limited number of characters on one line. I ran into another problem after adding this backslash. The backslash was followed by a long blank space when I entered the code in the terminal. With some help from my colleagues on Slack, I discovered that I could move the code to the next line to make more space. This ended up working perfectly. When I ran the code again, it passed Pep8 validation.&nbsp;
+
+![error](https://user-images.githubusercontent.com/91072896/154170027-2d93c299-f0dc-4bf9-a24c-9f27a6e4a2e1.png)
+
 ## Unfixed Bugs<div id='id-unfixed'>
   
+I encountered some problems while testing the application. The application worked well on most devices except for the Apple Ipad. So, the problem that arose was that when you opened the program and ran it, it brought you to the title screen where you had to enter a name. When you clicked on the area, a keypad appeared. However, once you entered the name and pressed the enter key, nothing appeared in the input field for name. I tried to fix this problem, but I was unable to do so. I had no idea what the issue was. I tried getting help but no one could help so that is why it is still an unfixed bug.
 
 ## Deployment<div id='id-deployment'>
 The website was deployed early on when I undertook the project. This was so I could test it early on. To deploy the website I used Heroku.
