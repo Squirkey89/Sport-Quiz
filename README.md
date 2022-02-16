@@ -27,7 +27,7 @@ The sports quiz application is a quiz game which will display questions for the 
 11. [Acknowledgements](#id-acknowledgements)
 
 # Flow Chart<div id='id-flow'>
-This flow chart I created shows the structure of the application I entended to create.&nbsp;
+This flow chart I created shows the structure of the application I wanted to create.&nbsp;
 
 ![flowchart](https://user-images.githubusercontent.com/91072896/154189015-870768d2-fe3c-4f6e-ad98-064ee7858ef7.png)
 
@@ -125,7 +125,7 @@ The final option on the main menu is for the users to exit the game. The custome
 ![name-val](https://user-images.githubusercontent.com/91072896/154194873-309cf2c4-c1ed-4380-a6bc-39d6d7f5abe4.png)
 
 ## Menu
-  The user will have four options in the main menu screen. If they decide to choose an invalid character an error message is displayed and they are prompted to enter a, b, c or d. I also used strip() and upper() on all the inputs fields if the user leaves a blank by accident and then enters a valid input then the option choosen will be accepted.&nbsp;
+  The user will have four options in the main menu screen. If they decide to choose an invalid character an error message is displayed and they are prompted to enter a, b, c or d. I also used strip() and upper() on all the inputs fields so, if the user leaves a blank by accident or capital letter and enters a valid input then the option choosen will be accepted.&nbsp;
 
   ![menu-val](https://user-images.githubusercontent.com/91072896/154193240-6eb3d169-a33f-4e2f-8681-79350be91d21.png)
 
