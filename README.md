@@ -144,9 +144,9 @@ As I was running my code through Pep8 validation, I found the lines to be too lo
 
 ## Unfixed Bugs<div id='id-unfixed'>
   
-I encountered some problems while testing the application. The application worked well on most devices except for the Apple Ipad. So, the problem that arose was that when you opened the program and ran it, it brought you to the title screen where you had to enter a name. When you clicked on the area, a keypad appeared. However, once you entered the name and pressed the enter key, nothing appeared in the input field for name. I tried to fix this problem, but I was unable to do so. I had no idea what the issue was. I tried getting help but no one could help so that is why it is still an unfixed bug.
+I encountered some problems while testing the application. The application worked well on most devices except for the Apple Ipad. So, the problem that arose was that when you opened the program and ran it, it brought you to the title screen where you had to enter a name. When you clicked on the area, a keypad appeared. However, once you entered the name and pressed the enter key, nothing appeared in the input field for name. I tried to fix this problem, but unfortunately after many attempts I was unable to do so. I tried getting help but was unsuccessful with that also, so that is why it is still unfixed.
 
-## Deployment<div id='id-deployment'>
+## Deployment<div id='id-deploy'>
 The website was deployed early on when I undertook the project. This was so I could test it early on. To deploy the website I used Heroku.
 
 Following are the steps I took to deploy my Heroku project:
@@ -169,3 +169,10 @@ Following are the steps I took to deploy my Heroku project:
 
 The live link to this website can be found here - https://sportsquiz1.herokuapp.com/
 
+## Credits<div id='id-credits'>
+* Content
+  * I referenced a line of code from [Stackoverflow](https://stackoverflow.com/questions/30076145/how-to-sort-list-of-lists-by-highest-number). I used the code when I was trying to sort the list by the highest number. The code is: `sorted(l, key=lambda x: int(x[1]), reverse=True)`.
+  * I also referenced the love maths project when transfering data from python to the spreadsheet in the update_worksheet function.
+  * All the question that are used in the quiz were taken from [Open Trivia Database](https://opentdb.com/api_config.php)
+  * [Am I Responsive](http://ami.responsivedesign.is/) was used for the header image that appears at the top of the read me file.
+  * While researching the application that I would build I took inspiration from [Mike Dane](https://www.youtube.com/watch?v=SgQhwtIoQ7o&t=179s&ab_channel=MikeDane) and also from [Bro Code](https://www.youtube.com/watch?v=yriw5Zh406s&t=513s&ab_channel=BroCode). After viewing those videos this encouraged me to make a quiz game.
