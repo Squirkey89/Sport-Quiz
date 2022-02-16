@@ -19,9 +19,10 @@ The sports quiz application is a quiz game which will display questions for the 
 3. [Testing](#id-testing) 
 4. [Bugs](#id-bugs)
 5. [Unfixed Bugs](#id-bugs)
-6. [Deployment](#id-deploy)
-7. [Credits](#id-credits)
-8. [Acknowledgements](#id-acknowledgements)
+6. [Technologies Used](#id-tech)
+7. [Deployment](#id-deploy)
+8. [Credits](#id-credits)
+9. [Acknowledgements](#id-acknowledgements)
 
 # UI<div id='id-ui'>
 # User Stories
@@ -146,6 +147,14 @@ As I was running my code through Pep8 validation, I found the lines to be too lo
 # Unfixed Bugs<div id='id-unfixed'>
   
 I encountered some problems while testing the application. The application worked well on most devices except for the Apple Ipad. So, the problem that arose was that when you opened the program and ran it, it brought you to the title screen where you had to enter a name. When you clicked on the area, a keypad appeared. However, once you entered the name and pressed the enter key, nothing appeared in the input field for name. I tried to fix this problem, but unfortunately after many attempts I was unable to do so. I tried getting help but was unsuccessful with that also, so that is why it is still unfixed.
+
+# Technologies Used<div id='id-tech'>
+  * Heroku
+  * Github
+  * Gitpod
+  * Google Spreadsheets
+  * Google Drive
+
 
 # Deployment<div id='id-deploy'>
 The website was deployed early on when I undertook the project. This was so I could test it early on. To deploy the website I used Heroku.
