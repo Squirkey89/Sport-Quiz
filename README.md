@@ -117,7 +117,7 @@ The final option on the main menu is for the users to exit the game. The custome
 
 * Furthermore, I would like to add a feature in the future that allows players to play against each other. A user can choose from a number of questions, and then both players can go head to head over them.
 
-# Invalid input
+# Invalid input <div id='id-invalid'>
 
 ## Enter Name
   As the user starts the game they will have to enter their name to begin. If the user leaves any white spaces or just presses enter they will not be able to proceed. An error message will be displayed and the user cant continue until a valid input is entered.&nbsp;
