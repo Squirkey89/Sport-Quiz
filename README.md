@@ -5,6 +5,7 @@ The sports quiz application is a quiz game which will display questions for the 
 ![amiresponsive](https://user-images.githubusercontent.com/91072896/154056148-34a77624-4b4b-48cc-85b5-2e1100de39d2.png)
 
 # Table of Contents
+1. [Flow Chart](#id-flow)
 1. [UI](#id-ui)
 2. [Features](#id-features)
       * [Home Screen](#id-home)
@@ -23,6 +24,13 @@ The sports quiz application is a quiz game which will display questions for the 
 7. [Deployment](#id-deploy)
 8. [Credits](#id-credits)
 9. [Acknowledgements](#id-acknowledgements)
+
+# Flow Chart<div id='id-flow'>
+This flow chart I created shows the structure of the application I entended to create.&nbsp;
+
+![flowchart](https://user-images.githubusercontent.com/91072896/154189015-870768d2-fe3c-4f6e-ad98-064ee7858ef7.png)
+
+
 
 # UI<div id='id-ui'>
 # User Stories
@@ -189,6 +197,7 @@ The live link to this website can be found here - https://sportsquiz1.herokuapp.
 
 ## Media
   * The large ascii text at the beginning of the game was used from a website called [patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) This website has loads of different styles available for text. The style I used is called 'Big moneyne'.
+  * I used [lucid chart](https://lucid.app/lucidchart/9331c746-149f-43ee-99b4-f5d069569366/edit?beaconFlowId=7EBCDF6C52EB4D67&invitationId=inv_2f7a6c93-0720-4f95-821a-a505c29dcaa4&page=NfXTJ6v46zip#) to create my flow chart.
 
 ## Acknowledgments<div id='id-acknowledgements'>
   * My mentor for the useful feedback direction and guidance he has provided since the beginning of the course.
