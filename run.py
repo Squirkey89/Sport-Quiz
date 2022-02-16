@@ -78,10 +78,10 @@ def quiz_questions():
 
 def start_screen():
     """
-    This is the beginning of the quiz for 
-    the user they will first find an 
-    introduction to the game with the quiz 
-    name and images. Then they are 
+    This is the beginning of the quiz for
+    the user they will first find an
+    introduction to the game with the quiz
+    name and images. Then they are
     prompted to press the enter key
     """
 
