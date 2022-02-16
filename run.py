@@ -232,8 +232,10 @@ def point(points, NAME):
 
     if points >= 8:
         print(f"Great job {NAME}. You scored {points} out of {num_questions}")
+        print("")
     elif points < 8:
         print(f"Not bad {NAME}. You scored {points} out of {num_questions}")
+        print("")
 
 
 def play_again():
@@ -310,8 +312,12 @@ def update_worksheet(username, points, worksheet_name):
     print(f"{worksheet_name} Worksheet updated successfully\n")
 
 
-main_menu()
+def main():
+    """
+    The main function calls the functions to play the game.
+    """
+    main_menu()
+    play_quiz_game()
+    play_again()
 
-play_quiz_game()
-
-play_again()
+main()
