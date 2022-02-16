@@ -78,10 +78,11 @@ def quiz_questions():
 
 def start_screen():
     """
-    This is the beginning of the quiz for the user
-    they will  first find an introduction to the game
-    with the quiz name and images.
-    Then they are prompted to press the enter key
+    This is the beginning of the quiz for
+    the user they will first find an
+    introduction to the game with the quiz
+    name and images. Then they are
+    prompted to press the enter key
     """
 
     print("""
@@ -152,8 +153,8 @@ def leaderboard():
     print("***********************Leaderboard************************\n")
     print()
     score_sheet = SHEET.worksheet("score").get_all_values()[1:]
-    for data in score_sheet:
-        data[1] = int(data[1])
+    for data_score in score_sheet:
+        data_score[1] = data_score(data[1])
 
     update_data = sorted(score_sheet, key=lambda x: int(x[1]), reverse=True)
 
@@ -185,7 +186,6 @@ def play_quiz_game():
     """
     This is the Quiz for the user to play it is multiple choice
     and has four options for the user to choose from.
-    I am able to take control, is there any chat option in this app?
     """
 
     questions = quiz_questions()
@@ -241,7 +241,7 @@ def point(points, NAME):
 def play_again():
     """
     This is available to players once they finish the quiz.
-    The user has the option to play again.
+    The user has the option to play again or simply quit.
     """
     valid_options = ['Y', 'N']
     replay = input("Do you want to play again? y/n\n")
@@ -265,10 +265,9 @@ def play_again():
 
 def main_menu():
     """
-    Upon passing the start screen. The user will be presented
-    with three options. First to play the game.
-    The second option is Instructions for playing the game.
-    The final option for the user is to exit the game.
+    Upon passing the start screen.
+    The user will be presented with four options.
+    Play game, Instructions, Leaderboard and exit
     """
 
     print("***********************Main Menu************************\n")
