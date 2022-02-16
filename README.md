@@ -176,3 +176,8 @@ The live link to this website can be found here - https://sportsquiz1.herokuapp.
   * All the question that are used in the quiz were taken from [Open Trivia Database](https://opentdb.com/api_config.php)
   * [Am I Responsive](http://ami.responsivedesign.is/) was used for the header image that appears at the top of the read me file.
   * While researching the application that I would build I took inspiration from [Mike Dane](https://www.youtube.com/watch?v=SgQhwtIoQ7o&t=179s&ab_channel=MikeDane) and also from [Bro Code](https://www.youtube.com/watch?v=yriw5Zh406s&t=513s&ab_channel=BroCode). After viewing those videos this encouraged me to make a quiz game.
+
+## Media
+  * The large ascii text at the beginning of the game was used from a website called [patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) This website has loads of different styles available for text. The style I used is called 'Big moneyne'.
+
+## Acknowledgments<div id='id-acknowledgements'>
